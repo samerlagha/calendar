@@ -1,0 +1,93 @@
+
+  .header {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(155, 154, 154, 0.75);
+    position: fixed;
+  
+    
+    &__button_create {
+        width: 120px;
+        height: 50px;
+        border-radius: 20px;
+        border: 1px solid rgba(70, 68, 68, 0.438);
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content:space-evenly;
+        color: #797d7e;
+        
+        font-weight: 500;
+        letter-spacing: 0.5px;
+
+        &:hover {
+            background-color: #080a8a;
+            color: white;
+            .fa-plus{
+                background: white;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+        }
+
+        .fa-plus {
+            font-size: 25px;
+            background: linear-gradient(167deg, rgb(228, 125, 40) 50%, rgb(20, 246, 76) 40%); 
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+
+           
+        }
+    }
+
+    &__button_today {
+        width: 80px;
+        height: 40px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid rgba(70, 68, 68, 0.438);
+       background:white;
+        color: black;
+        margin-left: 40px;
+        outline: none;
+        font-weight: 500;
+
+        &:hover {
+            background-color: blue;
+            color: white;
+        }
+    }
+
+    &__week-toggle {
+        
+        &_chevron-left {
+            margin-left: 30px;
+        }
+
+        &_chevron-right {
+            margin-left: 30px;
+        }
+
+        .chevron {
+            font-size: 15px;
+            color: black;
+            cursor: pointer;
+        }
+    }
+
+    &__current-month-year { 
+        font-size: 17px;
+        margin-left: 30px;
+        font-weight: 500;
+        color: black;
+        font-family: roboto;
+    }
+}
+.fa-chevron-right:hover{
+ color: limegreen;
+}
+.fa-chevron-left:hover{
+ color: limegreen;
+}
