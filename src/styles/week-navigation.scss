@@ -1,3 +1,13 @@
+.days-of-week {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    margin-top: 60px;
+    width: 100%;
+    height: 100px;
+    padding-left: 5px;
+    background-color: #fff;
+    border-bottom: 1px solid #d5d5d5;
 
     .gmt {
         min-width: 50px;
@@ -6,17 +16,6 @@
         padding: 0 0 10px 8px;
     }
 
-
-.days-of-week {
-    display: flex;
-    position: fixed;
-   
-    margin-top: 60px;
-    width: 100%;
-    height: 100px;
-    padding-left: 5px;
-    background-color: #fff;
-    border-bottom: 1px solid #d5d5d5;
   }
   
 .day {
@@ -28,42 +27,44 @@
     flex-grow: 1;
 }
 
-.day-name {
-   
-    font-size: 9px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    letter-spacing: .8px;
-    color: grey;
-    cursor: pointer;
-    &:hover{
-        color: #1a73e8;
+    .day-name {
+        z-index: 2;
+        font-size: 9px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        letter-spacing: .8px;
+        color: grey;
+        cursor: pointer;
+        &:hover{
+            color: #1a73e8;
+        }
+    
     }
 
+    .day-date {
+        display: flex;
+        justify-content: center;
+         z-index: 1;
+        font-size: 20px;
+        color: rgb(14, 13, 13);
+        padding: 6px;
+        min-width: 35px;
+    
+        &:hover{
+            background-color: rgb(27, 31, 240);
+            color: white;
+            border-radius: 100%;
+            cursor: pointer;
+           
+        }
+
+        &_current {
+            background-color: rgb(88, 193, 235);
+            color: white;
+            border-radius: 100%;
+        }
+        
 }
 
-.day-date {
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-    font-size: 20px;
-    color: rgb(14, 13, 13);
-    padding: 6px;
-    min-width: 35px;
-
-    &:hover{
-        background-color: rgb(27, 31, 240);
-        color: white;
-        border-radius: 100%;
-        cursor: pointer;
-       
-    }
-
-    &_current {
-        background-color: rgb(88, 193, 235);
-        color: white;
-        border-radius: 100%;
-    }
-    
     
 }

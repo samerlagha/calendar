@@ -7,12 +7,12 @@
   position: fixed;
 }
 .header__button_create {
-  width: 120px;
-  height: 50px;
+  width: 110px;
+  height: 40px;
   border-radius: 20px;
   border: 1px solid rgba(70, 68, 68, 0.438);
-  margin-left: 50px;
-  display: flex;
+  margin-left: 80px;
+  display: block;
   align-items: center;
   justify-content: space-evenly;
   color: #797d7e;
@@ -77,22 +77,22 @@
   color: limegreen;
 }
 
-.gmt {
-  min-width: 50px;
-  font-size: 10px;
-  align-self: flex-end;
-  padding: 0 0 10px 8px;
-}
-
 .days-of-week {
   display: flex;
   position: fixed;
+  z-index: 999;
   margin-top: 60px;
   width: 100%;
   height: 100px;
   padding-left: 5px;
   background-color: #fff;
   border-bottom: 1px solid #d5d5d5;
+}
+.days-of-week .gmt {
+  min-width: 50px;
+  font-size: 10px;
+  align-self: flex-end;
+  padding: 0 0 10px 8px;
 }
 
 .day {
@@ -119,7 +119,6 @@
 .day-date {
   display: flex;
   justify-content: center;
-  z-index: 1;
   font-size: 20px;
   color: #0e0d0d;
   padding: 6px;
@@ -140,6 +139,8 @@
 .sidebar {
   height: 100%;
   display: flex;
+  position: fixed;
+  z-index: 2;
   flex-direction: column;
   width: 50px;
   background-color: white;
@@ -160,6 +161,10 @@
   position: relative;
   top: 46px;
   color: grey;
+}
+
+.content {
+  display: flex;
 }
 
 .calendar {
@@ -196,10 +201,6 @@ html {
   font-size: 15px;
   font-weight: 400;
   cursor: pointer;
-}
-
-.content {
-  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */
