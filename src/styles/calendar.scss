@@ -1,14 +1,18 @@
 .content{
     display: flex;
+    z-index: 3;
+  
    
   }
 .calendar {
     width: 100%;
     height: 100vh;
     margin-top: 160px;
+    
    
     &__week-bar {
         display: flex;
+       
     }
     
     &__day-bar {
