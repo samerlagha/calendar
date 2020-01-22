@@ -167,7 +167,6 @@
 
 .content {
   display: flex;
-  z-index: 3;
 }
 
 .calendar {
