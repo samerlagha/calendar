@@ -144,8 +144,12 @@
           <div class="calendar__week-bar ">
             
           <div class="calendar__day-bar">
+           
             <div class="calendar__hour-bar"></div>
-
+            <div class="redline">
+              <div class="redline__ball"></div>
+              <div class="redline__line"></div>
+          </div>
           </div>
           <div class="calendar__day-bar">
             <div class="calendar__hour-bar"></div>
@@ -623,9 +627,78 @@
           <div class="calendar__day-bar">
             <div class="calendar__hour-bar"></div>
           </div>
+          </div>
+         
+      </section>
+      <!--redline-->
+
+     
+      
+      </main>
+
+      <!-- popup
+      <div class="popup-modal popup-displayed">
+        <form class="popup">      
+          <div class="popup__header">
+            <i class="fas fa-times popup__header_close-btn"></i>
+            <input class="popup__header_title-input" type="text" name="title" placeholder="Add Title"></input>
+          </div>
+  
+          <div class="popup__color-scheme">
+            <label class="popup__color-scheme_label">
+                <span class="popup__color-scheme_label-text">Choose a color</span>
+                <input class="popup__color-scheme_chooser" type="color" name="colorChooser" value="#4b28d1">
+            </label>
+        </div>
+  
+          <div class="popup__info">
+            <div class="popup__info_icon"><i class="far fa-clock"></i></div>
+            <input class="popup__info_date-from" type="date" name="dateFrom"></input>
+            <div class="popup__info_duration">
+              <input class="popup__info_duration-from" name="timeFrom" type="time"></input>
+              <div class="popup__info_duration-line"> - </div>
+              <input class="popup__info_duration-to" name="timeTo" type="time"></input>
+            </div>
+            <input class="popup__info_date-to" type="date" name="dateTo"></input>
+          </div>
+  
+          <div class="popup__description">
+            <div class="popup__description_icon"><i class="fas fa-align-left"></i></div>
+            <input class="popup__description_text" type="text" name="description" placeholder="Add Description"></input>
+            <input class="popup__id" type="number" name="id" value="0" hidden></input>
           </div>
           
-      </section>
-      </main>
+          <div class="popup__action">
+            <span class="popup__action_delete"><i class="fas fa-trash-alt"></i></span>
+            <input class="popup__action_save" type="submit" value="Save"></input>
+          </div>
+        </form>
+      </div> -->
+
+       <!--POPUP-->
+       <div class="popup-layer">
+        <form class="popup event">
+
+            <span class="popup__btn-close"><img class="close"
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/98/%D0%98%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0_%D0%BA%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA%D0%B0_%28ei%29.svg"></span>
+            <input class="event__name" name="header" type="text" placeholder="Добавьте название ">
+            <div class="popup__picker">
+                <img class="clock" src="https://img.icons8.com/pastel-glyph/64/000000/time.png">
+                <input class="event__date-start specialDate input" name="startTime" required type="date">
+                <input type="time" class="startTime_place time-place input" name="startTimePlace">
+                <span class='line'></span>
+                <input type="time" class="endTime_place time-place input" name="endTimePlace">
+                <input class="event__date-end specialDate input" name="endTime" required type="date">
+            </div>
+            <img class="multiline" src="https://img.icons8.com/windows/32/000000/multiline-text.png">
+            <input type="text" class="multiline__text" placeholder="Добавьте описание" name="description">  
+            <div class="footer-popup">
+                <p class="message_validation"></p>
+                <span class="event__btn-delete"><img class="bascket"
+                        src="https://img.icons8.com/windows/32/000000/trash.png"></span>
+                <button type="submit" class="event__btn-save btn_save">Сохранить</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
