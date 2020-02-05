@@ -1,0 +1,1 @@
+import { renderSidebar } from './sidebar.js';
