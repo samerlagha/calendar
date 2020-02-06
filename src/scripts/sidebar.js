@@ -8,7 +8,7 @@ function renderSidebar () {
     const sidebarHour = document.createElement('div');
     sidebarHour.classList.add('sidebar__hour');
     
-    const sidebarHourText = document.createEleme('span');
+    const sidebarHourText = document.createElement('span');
     sidebarHourText.classList.add('sidebar__hour-text');
     
     sidebarHourText.textContent = `${(hour < 10) ? '0' + hour : hour}:00`;
