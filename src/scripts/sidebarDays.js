@@ -1,3 +1,5 @@
+//Sidebar-days
+
 export const sidebarDaysBlock = document.querySelector('.main__sidebar_days');
 
 

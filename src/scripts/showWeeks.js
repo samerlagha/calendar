@@ -38,3 +38,4 @@ export const showPrevWeek = (week) => {
     showWeek(week);
 };
 export const switchWeekBackward = backwardSwitcherBtn.addEventListener('click', showPrevWeek.bind(backwardSwitcherBtn, week));
+

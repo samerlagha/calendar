@@ -1,45 +1,45 @@
-// export function createRedLine() {
-//   var redLine = document.createElement('div');
-//   redLine.setAttribute("id", 'red');
-//   redLine.setAttribute("class", 'redline');
+//Redline
 
-//   var redLineBall = document.createElement('div');
-//   redLineBall.setAttribute('class', 'redline__ball');
+export function createRedLine() {
+    var redLine = document.createElement('div');
+    redLine.setAttribute("id", 'red');
+    redLine.setAttribute("class", 'redline');
 
-//   var redLineLine = document.createElement('div');
-//   redLineLine.setAttribute('class', 'redline__line');
+    var redLineBall = document.createElement('div');
+    redLineBall.setAttribute('class', 'redline__ball');
 
-//   redLine.appendChild(redLineBall);
-//   redLine.appendChild(redLineLine);
-//   return redLine;
-// }
+    var redLineLine = document.createElement('div');
+    redLineLine.setAttribute('class', 'redline__line');
 
-// export const renderRedLIne = () => {
-//   const hourDiv = document.querySelector('div[data-day-number="' + (new Date().getDay()-1) + '"] > ' +
-//       'div[data-hour-number="' + new Date().getHours() + '"]');
-  
-//   const hourRect = hourDiv.getClientRects()[0];
-//   let redLine = document.getElementById('red');
+    redLine.appendChild(redLineBall);
+    redLine.appendChild(redLineLine);
+    return redLine;
+}
 
-//   if (redLine == null) {
-//       redLine = createRedLine();
+export const renderRedLIne = () => {
+    const hourDiv = document.querySelector('div[data-day-number="' + (new Date().getDay()-1) + '"] > ' +
+        'div[data-hour-number="' + new Date().getHours() + '"]');
+    
+    const hourRect = hourDiv.getClientRects()[0];
+    let redLine = document.getElementById('red');
 
-//   } else {
-//       redLine.parentNode.removeChild(redLine);
-//   }
+    if (redLine == null) {
+        redLine = createRedLine();
 
-//   let position = (hourRect.height / 60) * new Date().getMinutes();
-//   redLine.style.top = position + "px";
-//   hourDiv.appendChild(redLine);
-// }
-// export let timerId;
-// export const intervalFunc = () => {
-//   timerId = setInterval(renderRedLIne, 60 * 1000);
-//   return timerId;
-// };
-// intervalFunc(); 
+    } else {
+        redLine.parentNode.removeChild(redLine);
+    }
 
-// renderRedLIne();
+    let position = (hourRect.height / 60) * new Date().getMinutes();
+    redLine.style.top = position + "px";
+    hourDiv.appendChild(redLine);
+}
+export let timerId;
+export const intervalFunc = () => {
+    timerId = setInterval(renderRedLIne, 60 * 1000);
+    return timerId;
+};
+intervalFunc(); 
 
-
+renderRedLIne();
 
