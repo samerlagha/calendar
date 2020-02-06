@@ -1,4 +1,3 @@
-
 .display-none {
     display: block;
 }
@@ -10,7 +9,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-     z-index: 10;
+    z-index: 11;
 }
 
 .popup {
@@ -23,8 +22,6 @@
     padding: 16px 8px 16px 8px;
     border-radius: 8px;
     background-color: #fff;
-
-      
     &__picker {
         display: flex;
         margin: 45px 0;
@@ -103,7 +100,7 @@
         border: none;
     }
     &__text:hover{
-        background-color:  #e3e8ed;
+        background-color: $colorForHoverInputs;
     }
 }
 .centerData{
@@ -152,4 +149,3 @@
     bottom: 0;
     width: 100%;
 }
-
