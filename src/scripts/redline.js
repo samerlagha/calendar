@@ -14,7 +14,7 @@ export function createRedLine() {
   return redLine;
 }
 
-export const renderRedLine = () => {
+export const renderRedLIne = () => {
   const hourDiv = document.querySelector('div[data-day-number="' + (new Date().getDay()-1) + '"] > ' +
       'div[data-hour-number="' + new Date().getHours() + '"]');
   
@@ -39,5 +39,7 @@ export const intervalFunc = () => {
 };
 intervalFunc(); 
 
-renderRedLine();
+renderRedLIne();
+
+
 
