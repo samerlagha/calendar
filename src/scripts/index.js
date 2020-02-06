@@ -24,7 +24,7 @@ import {renderRedLIne} from './redLine.js';
 import {timerId} from './redLine.js';
 import {intervalFunc} from './redLine.js';
 
-import {funcForCreateButton} from './createButton.js';
+// import {funcForCreateButton} from './createButton.js';
 
 
 import {lockWindow} from './popup.js';
