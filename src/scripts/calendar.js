@@ -18,7 +18,13 @@ const renderCalendar = () =>{
             const hour = document.createElement('div');
             hour.classList.add('calendar__hour-bar');
             hour.setAttribute('day-date', i - 1);
-            hour.setAttribute()
+            hour.setAttribute('data-date', currentWeek[i - 1]);
+
+            day.append(hour);
+        }
+    }
+       week.addEventListener('click', createPopup);
+
         }
     }
 }
