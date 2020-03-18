@@ -1,17 +1,22 @@
-//bacground colors
-$backgroundColor: #fff;
-$backgroundGreyColor: #e8edf3;
+//background colors:
+$white: #fff;
 
+$grey: #808080; //no needed
+$lightGrey: #ececec; //no needed
+$classicGrey: #d5d5d5; //borders
+$darkGrey: #3c4043; //instead black
 
-//text colors
-$textColorBlack: #000;
-$textColorgrey: #52575c;
+$dark-violet-blue: #293dce;
+$blue: #325ce8; //hovered items
+$sky-blue: #1dadf4;
+$light-blue: #f0f7fe;
 
-//border colors
-$borderColor: #c4cad0;
+$red:#ea4335; //red line
+$violet: #5320a4;// violet line
+$light-violet: #6d49f6;
 
-//other
-$commoFontSize: 14px;
-$blueColor: #0851f6;
-$blueColorDarker: #0b60c0;
-$colorForHoverInputs: #e3e8ed;
+//text colors:
+
+$text-grey: #70757a;
+$text-darkGrey: #3c4043;
+$text-white: #fff;

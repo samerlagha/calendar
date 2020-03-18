@@ -1,23 +1,24 @@
 .redline {
+    width: 100%;
     display: flex;
-    position: absolute;
     align-items: center;
-    width: 12vh;
+    position: absolute;
+    height: 8px;
     z-index: 2;
-    &__ball {
-        position: relative;
-        bottom: 6px;
-        right: 6px;
-        height: 12px;
-        width: 12px;
-        border-radius: 100%;
-        background-color: red;
-    }
-    &__line {
-        position: relative;
-        bottom: 6px;
-        right: 6px;
-        width: 100%;
-        border-top: 2px solid red;
-    }
+    margin-top: 40px;
+}
+
+.line {
+    position: relative;
+    background-color: $red;
+    height: 2px;
+    width: 100%;
+}
+.dot {
+    position: relative;
+    border-radius: 100%;
+    background-color: $red;
+    height: 8px;
+    width: 8px;
+
 }

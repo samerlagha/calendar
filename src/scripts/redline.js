@@ -1,45 +1,43 @@
-//Redline
+import { renderCalendar } from "./render-calendar.js";
 
-// export function createRedLine() {
-//     var redLine = document.createElement('div');
-//     redLine.setAttribute("id", 'red');
-//     redLine.setAttribute("class", 'redline');
 
-//     var redLineBall = document.createElement('div');
-//     redLineBall.setAttribute('class', 'redline__ball');
+const redLine = document.querySelector(".redline");
 
-//     var redLineLine = document.createElement('div');
-//     redLineLine.setAttribute('class', 'redline__line');
+const currentHourBar = displayRedLineOnCurrentHourBar();
 
-//     redLine.appendChild(redLineBall);
-//     redLine.appendChild(redLineLine);
-//     return redLine;
-// }
+export function renderRedLine() {
 
-// export const renderRedLIne = () => {
-//     const hourDiv = document.querySelector('div[data-day-number="' + (new Date().getDay()-1) + '"] > ' +
-//         'div[data-hour-number="' + new Date().getHours() + '"]');
-    
-//     const hourRect = hourDiv.getClientRects()[0];
-//     let redLine = document.getElementById('red');
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
 
-//     if (redLine == null) {
-//         redLine = createRedLine();
+  const line = document.createElement("div");
+  line.classList.add("line");
 
-//     } else {
-//         redLine.parentNode.removeChild(redLine);
-//     }
+  redLine.append(dot);
+  redLine.append(line);
 
-//     let position = (hourRect.height / 60) * new Date().getMinutes();
-//     redLine.style.top = position + "px";
-//     hourDiv.appendChild(redLine);
-// }
-// export let timerId;
-// export const intervalFunc = () => {
-//     timerId = setInterval(renderRedLIne, 60 * 1000);
-//     return timerId;
-// };
-// intervalFunc(); 
+  currentHourBar.append(redLine);
+}
 
-// renderRedLIne();
+renderRedLine();
 
+function displayRedLineOnCurrentHourBar() {
+
+  // renderRedLine();
+
+  const hourContainer = document.querySelectorAll(".calendar__hour-bar");
+
+  const currentDate = new Date();
+  const currentDay = currentDate.getDay();
+  const currentHour = currentDate.getHours();
+  const currentMinute = currentDate.getMinutes()
+
+  let positionInsideHourBar = currentMinute - 4;
+
+  redLine.style.marginTop = positionInsideHourBar + 'px';
+
+  return [...hourContainer].find(
+    el => el.dataset.day == currentDay && el.dataset.hour == currentHour);
+}
+
+displayRedLineOnCurrentHourBar();
